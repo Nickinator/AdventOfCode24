@@ -1,9 +1,10 @@
 import os
+import sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-file_path = os.path.join(os.path.dirname(__file__), "input.txt")
+from util import read_input_file
 
-with open(file_path) as f:
-    data = f.read().splitlines()
+data = read_input_file("Day01")
 
 first_list = []
 second_list = []
