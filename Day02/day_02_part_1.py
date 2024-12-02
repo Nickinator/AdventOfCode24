@@ -17,11 +17,10 @@ def is_safe(report) -> bool:
             return False
 
     # check for strictly ascending or descending order
-    for i in range(len(report) - 1):
-        if is_strictly_ascending(report) or is_strictly_descending(report):
-            return True
-
-    return False
+    if is_strictly_ascending(report) or is_strictly_descending(report):
+        return True
+    else:
+        return False
 
 def is_strictly_ascending(report) -> bool:
     for i in range(len(report) - 1):
